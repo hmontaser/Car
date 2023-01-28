@@ -10,15 +10,15 @@ import org.testng.annotations.Test;
 public class Login_Request
         extends BasicConfiguration {
 
-public Response response;
+public static Response response;
 
-    public void loginRequest(Login_Parameters loginParameters) {
+    public static void loginRequest(Login_Parameters loginParameters) {
 
-        this.requestSpecification.param("mobile",loginParameters.mobile)
+        requestSpecification.param("mobile",loginParameters.mobile)
                 .param("password",loginParameters.password);
 
 //login URL Path
-         this.response = requestSpecification.when()
+         response = requestSpecification.when()
                 .post("/v1/auth/login");
 
 

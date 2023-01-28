@@ -7,9 +7,9 @@ public class BasicConfiguration
         extends GlobalVariables {
 
 //RequestSpecifications which contains BaseURI and Headers
-  public RequestSpecification requestSpecification;
+  public static RequestSpecification requestSpecification;
   public BasicConfiguration(){
-      this.requestSpecification = RestAssured.given()
+      requestSpecification = RestAssured.given()
             .baseUri("https://provider.test.carefer.co/api/provider")
             .header("Platform",
                     "careferProviderApplication2Ej!%")

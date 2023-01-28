@@ -7,12 +7,12 @@ import io.restassured.response.Response;
 
 public class Register_Request
         extends BasicConfiguration {
-    public Response response;
+    public static Response response;
 
     public void registerRequest(Register_Parameters registerParameters) {
 
 
-this.requestSpecification.param("password",registerParameters.password)
+requestSpecification.param("password",registerParameters.password)
                 .param("password_confirmation",
                         registerParameters.password_confirmation)
                 .param("favorite_language",
@@ -29,7 +29,7 @@ this.requestSpecification.param("password",registerParameters.password)
                         registerParameters.email);
 
 
-         this.response = requestSpecification.when()
+         response = requestSpecification.when()
                 .post("/v1/auth/register");
 
 

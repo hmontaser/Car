@@ -8,14 +8,16 @@ import org.junit.jupiter.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static Test_Cases_Execution.TC1_registration.mobileNumber;
+
 public class TC3_login
         extends Login_Request {
 
 
 //Separate testCase.
-    public String mobileNumber =randomMobileNumber;
+
 @Test
-    public void execute(){
+    public static void execute(){
 //actual testCases values.
 Login_Parameters loginParameters = new Login_Parameters(mobileNumber,
         "123456");
@@ -23,9 +25,9 @@ Login_Parameters loginParameters = new Login_Parameters(mobileNumber,
         loginRequest(loginParameters);
 
 //extract response body.
-    ResponseBody responseBody = this.response.getBody();
+    ResponseBody responseBody = response.getBody();
     String bodyAsString = responseBody.asString();
-    System.out.println("ResponseBody is" + bodyAsString);
+    System.out.println("login response body is " + bodyAsString);
 //validate that the response status code is 200.
     Assertions.assertEquals(200, response.statusCode());
 //validate that the response body contains Success:True.

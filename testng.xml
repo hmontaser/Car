@@ -5,6 +5,6 @@
         <class name="Test_Cases_Execution.TC1_registration"><methods><include name="execute"/></methods></class>
         <class name="Test_Cases_Execution.TC2_verify"><methods><include name="execute"/></methods></class>
         <class name="Test_Cases_Execution.TC3_login"><methods><include name="execute"/></methods></class>
-    </classes> 
+    </classes>
 </test>
 </suite>

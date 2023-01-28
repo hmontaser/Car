@@ -9,19 +9,19 @@ import org.testng.annotations.Test;
 public class Verify_Request
         extends BasicConfiguration {
 
-    public Response response;
+    public static Response response;
 @Test
-public void verifyRequest(Verify_Parameters verifyParameters) {
+public static void verifyRequest(Verify_Parameters verifyParameters) {
 
 
-this.requestSpecification
+requestSpecification
             .param("mobile",
                     verifyParameters.mobile)
             .param("verification_code",
                     verifyParameters.verification_code);
 
 
-     this.response = requestSpecification.when()
+     response = requestSpecification.when()
             .post("/v1/auth/verify");
 
 

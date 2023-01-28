@@ -4,6 +4,7 @@ package Test_Cases_Execution;
 import apis_Parameters.Register_Parameters;
 import apis_Requests.Register_Request;
 import io.restassured.response.ResponseBody;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,21 +14,23 @@ public class TC1_registration
         extends Register_Request {
 
     //Separate testCase.
-public String mobileNumber =randomMobileNumber;
+public static String mobileNumber =randomMobileNumber;
+
 @Test
-    public void registerExecute(){
+    public static void execute(){
 
 //actual testCases values.
     Register_Parameters parameters = new Register_Parameters("123456",
             "123456","en",
             "Hmontaser",1,
-           randomName,this.mobileNumber
+           randomName,mobileNumber
             ,randomEmail);
-       registerRequest(parameters);
+    Register_Request registerRequest = new Register_Request();
+       registerRequest.registerRequest(parameters);
 
 //extract response body.
    ResponseBody responseBody = response.getBody();
-    System.out.println("ResponseBody is" + responseBody.asString());
+    System.out.println("registration response body is " + responseBody.asString());
     String bodyAsString = responseBody.asString();
 
     //validate that the response status code is 200.
