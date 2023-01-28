@@ -1,14 +1,12 @@
-package Test_Cases_Execution;
+package test_Cases_Execution;
 import apis_Parameters.Login_Parameters;
-import apis_Parameters.Verify_Parameters;
 import apis_Requests.Login_Request;
-import apis_Requests.Verify_Request;
 import io.restassured.response.ResponseBody;
 import org.junit.jupiter.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static Test_Cases_Execution.TC1_registration.mobileNumber;
+import static test_Cases_Execution.TC1_registration.mobileNumber;
 
 public class TC3_login
         extends Login_Request {

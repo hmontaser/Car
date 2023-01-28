@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/wamp64/www/Carefer">
     <classes>
-        <class name="Test_Cases_Execution.TC1_registration"><methods><include name="execute"/></methods></class>
-        <class name="Test_Cases_Execution.TC2_verify"><methods><include name="execute"/></methods></class>
-        <class name="Test_Cases_Execution.TC3_login"><methods><include name="execute"/></methods></class>
+        <class name="test_Cases_Execution.TC1_registration"><methods><include name="execute"/></methods></class>
+        <class name="test_Cases_Execution.TC2_verify"><methods><include name="execute"/></methods></class>
+        <class name="test_Cases_Execution.TC3_login"><methods><include name="execute"/></methods></class>
     </classes>
 </test>
 </suite>

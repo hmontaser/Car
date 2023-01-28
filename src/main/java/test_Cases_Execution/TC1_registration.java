@@ -1,10 +1,9 @@
-package Test_Cases_Execution;
+package test_Cases_Execution;
 
 
 import apis_Parameters.Register_Parameters;
 import apis_Requests.Register_Request;
 import io.restassured.response.ResponseBody;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
